@@ -1,0 +1,327 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-style:bold;
+    background-image: radial-gradient(rgb(61, 41, 60),black);
+    /* background-color: rgb(22,22,22); */
+}
+
+
+#title {
+    /* background-color: rgb(22,22,22); */
+    width:1800px;
+    height:65px;
+    text-align: left;
+    padding-left:70px;
+    color:rgb(165, 55, 253);
+    border-bottom:rgb(160, 133, 222) dashed 2px;
+    border-top:rgb(160, 133, 222) dashed 2px;
+    margin-bottom:1.5px;
+}
+
+#content {
+    /* background-color:rgb(22,22,22); */
+    width:1870px;
+    height:900px;
+    display:flex;
+    flex-direction: row;
+    padding-bottom:25px;
+    border-bottom: rgb(166, 146, 212) dashed 2px;
+}
+#left {
+    /* background-color:rgb(22,22,22); */
+    flex:12;
+    display:flex;
+    flex-direction: column;
+}
+
+#mapPanel {
+    /* background-color: rgb(26,26,26); */
+    flex:2;
+    display: flex;
+    flex-direction: row;
+    /* border-right:rgb(160, 133, 222) dashed 1.5px; */
+}
+
+#barPanel {
+    /* background-color: rgb(22,22,22); */
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    /* border-top:rgb(160, 133, 222) dashed 1.5px; */
+    /* border-right:rgb(160, 133, 222) dashed 1.5px; */
+}
+/* 
+#middle {
+    background-color:lightpink;
+    flex:2;
+} */
+
+#right {
+    flex:6;
+    display:flex;
+    flex-direction: column;
+    /* padding-right:2px; */
+    padding-left:10px;
+    padding-bottom: 50px;
+    border-left:rgba(160, 133, 222) dotted 2px;
+}
+
+#map {
+flex:7;
+   text-align: center;
+   /* border:thin solid silver; */
+   display:flex;
+   flex-direction:column;
+}
+
+#maptitle{
+    flex:50;
+}
+
+#themap{
+    flex:481;
+    position: relative;
+}
+
+#map-slider{
+    flex:47;
+}
+
+
+#bar {
+    flex:4;
+    /* border:thin dashed silver; */
+    
+}
+
+#barchart {
+    position: absolute;
+
+}
+
+#packLayout-export {
+    /* background-color: rgb(22,22,22); */
+    flex:5;
+    z-index:2;
+}
+
+#packLayout-import {
+    flex:5;
+    /* background-color:rgb(22,22,22); */
+}
+
+#layoutchart-info {
+    flex:4;
+    /* background-color:rgb(22,22,22); */
+}
+
+#exportBarChart {
+    height: 290px;
+    width: 600px;
+    /* background-color: rgb(22,22,22); */
+    align-self: flex-end;
+}
+
+#exportBarChart h2 {
+    font-size: 20px;
+    color:lavender;
+}
+
+#importBarChart {
+    height: 290px;
+    width: 600px;
+    /* background-color: black; */
+    align-self: flex-end;
+}
+
+#importBarChart h2 {
+    font-size: 20px;
+    color: lavender;
+}
+
+#packLayout-export circle {
+    /* fill:#7fc5c9; */
+    /* opacity: 0.2; */
+    stroke:rgba(0,0,0,0);
+    z-index:2;
+}
+
+#packLayout-export svg text{
+    z-index:5;
+    fill:#fff;
+    font-size:13px;
+}
+
+#packLayout-import circle {
+    /* fill:#7fc5c9; */
+    /* opacity: 0.2; */
+    z-index:2;
+}
+
+/* #packLayout-import circle:hover {
+    
+} */
+
+#packLayout-import svg text{
+    z-index:5;
+    fill:#fff;
+    font-size:13px;
+}
+
+path {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: .5px;
+}
+path:hover {
+    stroke:silver;
+    stroke-width:2px;
+    fill-opacity: 0.5;
+    
+}
+
+#maptitle {
+    text-align: left;
+    
+}
+.maptitle {
+    font-size:20px;
+    color:white;
+    text-align: left;
+}
+
+
+
+.box {
+    margin: 0.5px;
+    float: left;
+    text-align: center;
+}
+
+.chartBar:hover {
+    fill: #4d308b;
+    
+}
+
+.xaxis {
+    fill: none;
+    
+}
+
+.axis line {
+    fill: white;
+    stroke: white;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+    text-anchor: start;
+    fill: #ffffff;
+}
+
+.tooltip {
+    position: absolute;
+    max-width: 200px;
+    height: auto;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rbga(0, 0, 0, 0.5);
+    pointer-events: none;
+    font-family: 'Lato', sans-serif;
+    font-style:bold;
+    font-size: 18px;
+}
+
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    margin-top:-5px;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 30px; /* Set a specific slider handle width */
+    height: 13px; /* Slider handle height */
+    background: rgb(160, 133, 222); 
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: rgb(160, 133, 222); 
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .commodity-label {
+      color:white;}
+
+  .mapLegend {
+      /* background-color: black; */
+      z-index: 1;
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+
+  .legend-label {
+      fill: white;
+      /* font-family: 'Orbitron', 'sans-serif' */
+      /* z-index: -1; */
+  }
+
+  .chartTitle {
+    font-family: 'Economica', sans-serif;
+    font-size: 25px;
+    font-style:bold;
+  }
+
+  .chart-label {
+    /* font-family:'Orbitron', 'sans-serif'; */
+    font-style: 'bold';
+    font-size: '18px';
+    text-shadow: 1.5px 3px black;
+  }
+
+  .axisLabel text {
+    /* font-family: 'sans-serif'; */
+    fill: white;
+}
+
+.textLabels {
+    fill: white;
+    font-size: 16px;
+    /* font-family: 'sans-serif' */
+}
+
+  .show-state-name {
+    font-family:'Orbitron', 'sans-serif';
+    text-shadow: 1.5px 3px black;
+  }
+
+  .selected {
+      fill-opacity: 0.5;
+  }
